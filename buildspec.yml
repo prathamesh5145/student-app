@@ -6,12 +6,10 @@ phases:
       - echo Installing OpenJDK 11...
       - apt-get update
       - apt-get install -y openjdk-11-jdk
-
       - echo Installing Maven 3.3.1...
       - curl -sL https://archive.apache.org/dist/maven/maven-3/3.3.1/binaries/apache-maven-3.3.1-bin.tar.gz | tar xz -C /opt
       - export MAVEN_HOME=/opt/apache-maven-3.3.1
       - export PATH=$MAVEN_HOME/bin:$PATH
-
       - echo "Maven version: $(mvn --version)"
 
   pre_build:
